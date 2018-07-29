@@ -20,6 +20,10 @@ public class HelloController {
     @Resource
     private DiscoveryClient client;
 
+    /**
+     * 登陆入口
+     * @return
+     */
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index(){
         ServiceInstance instance = client.getLocalServiceInstance();
